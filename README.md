@@ -1,5 +1,5 @@
 # Microcontroladores
-Atividades referente a disciplina de Microcontroladores da Universidade Federal da Paraíba - Turma 2023.2
+Atividades utilizando PIC 12F675, referente a disciplina de Microcontroladores da Universidade Federal da Paraíba - Turma 2023.2
 
 # Atividade 2: Divisão de 2 números e resultado com uma casa decimal
 **Objetivo:** Exercícios de familiarização com o conjunto de instruções do PIC. <br/>
