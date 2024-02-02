@@ -5,7 +5,7 @@ Guia de atividades utilizando PIC 12F675, baseado na disciplina "Microcontrolado
 Um microcontrolador é um dispositivo compacto e altamente integrado que contém um processador central, memória, periféricos de entrada/saída e, em alguns casos, interfaces de comunicação. Ele é projetado para controlar funções específicas em sistemas embarcados. Ao contrário dos microprocessadores, que geralmente precisam de componentes externos para realizar tarefas específicas, os microcontroladores são projetados para serem autossuficientes. <br/>
 
 <p align="center">
-  <img src="https://github.com/lauradefaria/Microcontroladores/blob/main/imgs/Microcontrolador.png" width="400"> <br/>
+  <img src="https://github.com/lauradefaria/Microcontroladores/blob/main/imgs/Microcontrolador.png" width="100"> <br/>
   Figura 1: Microcontrolador     <br/>
 </p>
 
@@ -24,8 +24,8 @@ Ademais, as variações de microcontroladores se definem também pelas suas conf
 Microcontroladores são peças fundamentais em uma diversidade de setores, desempenhando papéis cruciais em uma ampla gama de aplicações. Eles estão presentes em: Eletrodoméstico; Eletrônicos de consumo; Setor automotivo; Sistemas de controle industrial; Equipamentos médicos; Dispositivos de comunicação; Automação residencial. <br/>
 
 <p align="center">
-  <img src="https://github.com/lauradefaria/Microcontroladores/blob/main/imgs/Aplicacao1.png" width="400"> 
-  <img src="https://github.com/lauradefaria/Microcontroladores/blob/main/imgs/Aplicacao2.png" width="400"> <br/>
+  <img src="https://github.com/lauradefaria/Microcontroladores/blob/main/imgs/Aplicacao1.png" width="100"> 
+  <img src="https://github.com/lauradefaria/Microcontroladores/blob/main/imgs/Aplicacao2.png" width="100"> <br/>
   Figura 2: Aplicações de Microcontroladores     <br/>
 </p>
 
@@ -47,7 +47,7 @@ Por fim, o desenvolvimento rápido de protótipos é facilitado por ferramentas 
 O PIC12F675 é um microcontrolador de 8 bits fabricado pela Microchip Technology. Sua arquitetura de processador opera em instruções de 8 bits, sendo adequado para tarefas mais simples e aplicações de controle de baixo a médio nível. Possui uma memória de programa Flash de 1 KB para armazenamento de código, além de 64 bytes de memória RAM para armazenamento temporário de dados durante a execução do programa.<br/>
 
 <p align="center">
-  <img src="https://github.com/lauradefaria/Microcontroladores/blob/main/imgs/pic12f675.jfif" width="600"> <br/>
+  <img src="https://github.com/lauradefaria/Microcontroladores/blob/main/imgs/pic12f675.jfif" width="100"> <br/>
   Figura 3: Microcontrolador PIC12F675     <br/>
 </p>
 
@@ -65,23 +65,23 @@ Utiliza-se da IDE MPLAB X para executar e visualizar os exercícios propostos. P
 
 2. Após instalado, clique na seção no canto superior esquerdo `File` e em `New Project`.<br/>
 <p align="center">
-  <img src="https://github.com/lauradefaria/Microcontroladores/blob/main/imgs/instalar1.png" width="400"> <br/>
+  <img src="https://github.com/lauradefaria/Microcontroladores/blob/main/imgs/instalar1.png" width="100"> <br/>
   Figura 4: Iniciar a criação do Projeto     <br/><br/>
 </p>
 
 3. Depois disso siga o percurso: `Standalone Project` -> o aparelho que será trabalhado `PIC12F675` -> o debbug header `AC162050` -> `Simulator` -> `mpasm`. <br/>
 <p align="center">
-  <img src="https://github.com/lauradefaria/Microcontroladores/blob/main/imgs/instalar2.png" width="400"> 
-  <img src="https://github.com/lauradefaria/Microcontroladores/blob/main/imgs/instalar3.png" width="400"> 
-  <img src="https://github.com/lauradefaria/Microcontroladores/blob/main/imgs/instalar4.png" width="400"> 
-  <img src="https://github.com/lauradefaria/Microcontroladores/blob/main/imgs/instalar5.png" width="400"> 
-  <img src="https://github.com/lauradefaria/Microcontroladores/blob/main/imgs/instalar6.png" width="400"> <br/>
+  <img src="https://github.com/lauradefaria/Microcontroladores/blob/main/imgs/instalar2.png" width="100"> 
+  <img src="https://github.com/lauradefaria/Microcontroladores/blob/main/imgs/instalar3.png" width="100"> 
+  <img src="https://github.com/lauradefaria/Microcontroladores/blob/main/imgs/instalar4.png" width="100"> 
+  <img src="https://github.com/lauradefaria/Microcontroladores/blob/main/imgs/instalar5.png" width="100"> 
+  <img src="https://github.com/lauradefaria/Microcontroladores/blob/main/imgs/instalar6.png" width="100"> <br/>
   Figura 5: Passo-a-passo da criação do projeto     <br/><br/>
 </p>
 
 4. Por fim, clique na opção `Souce Files` dentro do seu projeto (localizado na esquerda) e `Add Existing Item`, adicionando o arquivo que deseja trabalhar (Caso deseje implementar um projeto do início, utilize como base o arquivo `Vazio.ASM` localizado neste repositório). <br/>
 <p align="center">
-  <img src="https://github.com/lauradefaria/Microcontroladores/blob/main/imgs/instalar7.png" width="400"> <br/>
+  <img src="https://github.com/lauradefaria/Microcontroladores/blob/main/imgs/instalar7.png" width="100"> <br/>
   Figura 6: Adicionar arquivo no projeto    <br/><br/>
 </p>
 
@@ -89,21 +89,21 @@ Para rodar o programa e realizar a verificação de sinal, tempo ou valor das va
 
 • Rodar o programa: Primeiramente Clique em `Clean and Build for Debuggin Main Project`, depois em `Launch Debugger Main Project`, depois utilizando a tecla F7 será possível verificar cada linha do código. Caso deseje observar apenas um trecho do código, clique no número da linha para adicionar um breakpoint, podendo pular diretamente para ele utilizando a tecla F5. <br/>
 <p align="center">
-  <img src="https://github.com/lauradefaria/Microcontroladores/blob/main/imgs/testar1.png" width="400"> 
-  <img src="https://github.com/lauradefaria/Microcontroladores/blob/main/imgs/testar2.png" width="400"> <br/>
+  <img src="https://github.com/lauradefaria/Microcontroladores/blob/main/imgs/testar1.png" width="100"> 
+  <img src="https://github.com/lauradefaria/Microcontroladores/blob/main/imgs/testar2.png" width="100"> <br/>
   Figura 7: Compilar e rodar o projeto     <br/><br/>
 </p>
 
-• Para visualizar variáveis: Clique com o botão direito do mouse no nome do projeto, nisso aparecerá um menu. Selecione a opção "Properties" -> Surgirá a janela "Project Properties" -> Selecione a opção "mpasm (Global Options)" -> Habilite a opção "Build in absolute mode" -> Depois, "Apply" e "OK" (Recompile o projeto para que as alterações sejam habilitadas). <br/>
+• Para visualizar variáveis: Clique com o botão direito do mouse no nome do projeto, nisso aparecerá um menu. Selecione a opção `Properties` -> Surgirá a janela `Project Properties` -> Selecione a opção `mpasm (Global Options)` -> Habilite a opção `Build in absolute mode` -> Depois, `Apply` e `OK` (Recompile o projeto para que as alterações sejam habilitadas). <br/>
 <p align="center">
-  <img src="https://github.com/lauradefaria/Microcontroladores/blob/main/imgs/testar4.jfif" width="400"> 
-  <img src="https://github.com/lauradefaria/Microcontroladores/blob/main/imgs/testar5.jfif" width="400"> <br/>
+  <img src="https://github.com/lauradefaria/Microcontroladores/blob/main/imgs/testar4.jfif" width="100"> 
+  <img src="https://github.com/lauradefaria/Microcontroladores/blob/main/imgs/testar5.jfif" width="100"> <br/>
   Figura 8: Visualizar valor das variáveis     <br/><br/>
 </p>
 
-•Para visualizar sinal ou tempo: Clique em Window e selecione "Debuggin" (para escolher Stopwatch e visualizar o tempo) ou "Simulator" (para escolher Logic Analyser e visualizar a onda referente ao sinal).
+•Para visualizar sinal ou tempo: Clique em Window e selecione `Debuggin` (para escolher Stopwatch e visualizar o tempo) ou `Simulator` (para escolher Logic Analyser e visualizar a onda referente ao sinal).
 <p align="center">
-  <img src="https://github.com/lauradefaria/Microcontroladores/blob/main/imgs/testar3.png" width="400"> <br/>
+  <img src="https://github.com/lauradefaria/Microcontroladores/blob/main/imgs/testar3.png" width="100"> <br/>
   Figura 9: Seção para visualizar tempo ou sinal     <br/><br/>
 </p>
 
