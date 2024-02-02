@@ -47,7 +47,7 @@ Por fim, o desenvolvimento rápido de protótipos é facilitado por ferramentas 
 O PIC12F675 é um microcontrolador de 8 bits fabricado pela Microchip Technology. Sua arquitetura de processador opera em instruções de 8 bits, sendo adequado para tarefas mais simples e aplicações de controle de baixo a médio nível. Possui uma memória de programa Flash de 1 KB para armazenamento de código, além de 64 bytes de memória RAM para armazenamento temporário de dados durante a execução do programa.<br/>
 
 <p align="center">
-  <img src="https://github.com/lauradefaria/Microcontroladores/blob/main/imgs/pic12f675.jfif" width="400"> <br/>
+  <img src="https://github.com/lauradefaria/Microcontroladores/blob/main/imgs/pic12f675.jfif" width="600"> <br/>
   Figura 3: Microcontrolador PIC12F675     <br/>
 </p>
 
