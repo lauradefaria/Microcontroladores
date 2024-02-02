@@ -96,7 +96,7 @@ Para rodar o programa e realizar a verificação de sinal, tempo ou valor das va
 
 • Para visualizar variáveis: Clique com o botão direito do mouse no nome do projeto, nisso aparecerá um menu. Selecione a opção `Properties` -> Surgirá a janela `Project Properties` -> Selecione a opção `mpasm (Global Options)` -> Habilite a opção `Build in absolute mode` -> Depois, `Apply` e `OK` (Recompile o projeto para que as alterações sejam habilitadas). <br/>
 <p align="center">
-  <img src="https://github.com/lauradefaria/Microcontroladores/blob/main/imgs/testar4.jpeg" width="250"> 
+  <img src="https://github.com/lauradefaria/Microcontroladores/blob/main/imgs/testar4.jpeg" width="250"> <br/>
   <img src="https://github.com/lauradefaria/Microcontroladores/blob/main/imgs/testar5.jfif" width="250"> <br/>
   Figura 8: Visualizar valor das variáveis     <br/><br/>
 </p>
