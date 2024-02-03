@@ -1,3 +1,5 @@
+[![author](https://img.shields.io/badge/author-lauradefaria-blue.svg)](https://github.com/lauradefaria)
+
 # Microcontroladores
 Guia de atividades utilizando PIC 12F675, baseado na disciplina "Microcontroladores" ministrada na Universidade Federal da Paraíba (UFPB) - [Prof. Dr. Mardson Freitas de Amorim](https://iwada2023.ci.ufpb.br/home/mardson2/).
 
@@ -42,7 +44,7 @@ O PIC12F675 é um microcontrolador de 8 bits fabricado pela Microchip Technology
 
 <p align="center">
   <img src="https://github.com/lauradefaria/Microcontroladores/blob/main/imgs/pic12f675.jfif" width="250"> <br/>
-  Figura 3: Microcontrolador PIC12F675     <br/>
+  Figura 2: Microcontrolador PIC12F675     <br/>
 </p>
 
 Os periféricos integrados incluem timers/counters, módulo PWM (Pulse Width Modulation), comparadores analógicos e um número limitado de portas de entrada/saída (I/O), facilitando a implementação de diversas funções sem a necessidade de componentes externos em muitos casos. Apesar de sua simplicidade em comparação com modelos mais avançados, o PIC12F675 suporta comunicação serial síncrona (SPI - Serial Peripheral Interface) para facilitar a interação com outros dispositivos.<br/>
@@ -60,7 +62,7 @@ Utiliza-se da IDE MPLAB X para executar e visualizar os exercícios propostos. P
 2. Após instalado, clique na seção no canto superior esquerdo `File` e em `New Project`.<br/>
 <p align="center">
   <img src="https://github.com/lauradefaria/Microcontroladores/blob/main/imgs/instalar1.png" width="250"> <br/>
-  Figura 4: Iniciar a criação do Projeto     <br/><br/>
+  Figura 3: Iniciar a criação do Projeto     <br/><br/>
 </p>
 
 3. Depois disso siga o percurso: `Standalone Project` -> o aparelho que será trabalhado `PIC12F675` -> o debbug header `AC162050` -> `Simulator` -> `mpasm`. <br/>
@@ -70,13 +72,13 @@ Utiliza-se da IDE MPLAB X para executar e visualizar os exercícios propostos. P
   <img src="https://github.com/lauradefaria/Microcontroladores/blob/main/imgs/instalar4.png" width="250"> 
   <img src="https://github.com/lauradefaria/Microcontroladores/blob/main/imgs/instalar5.png" width="250"> 
   <img src="https://github.com/lauradefaria/Microcontroladores/blob/main/imgs/instalar6.png" width="250"> <br/>
-  Figura 5: Passo-a-passo da criação do projeto     <br/><br/>
+  Figura 4: Passo-a-passo da criação do projeto     <br/><br/>
 </p>
 
 4. Por fim, clique na opção `Souce Files` dentro do seu projeto (localizado na esquerda) e `Add Existing Item`, adicionando o arquivo que deseja trabalhar (Caso deseje implementar um projeto do início, utilize como base o arquivo `Vazio.ASM` localizado neste repositório). <br/>
 <p align="center">
   <img src="https://github.com/lauradefaria/Microcontroladores/blob/main/imgs/instalar7.png" width="250"> <br/>
-  Figura 6: Adicionar arquivo no projeto    <br/><br/>
+  Figura 5: Adicionar arquivo no projeto    <br/><br/>
 </p>
 
 Para rodar o programa e realizar a verificação de sinal, tempo ou valor das variáveis: <br/>
@@ -85,20 +87,20 @@ Para rodar o programa e realizar a verificação de sinal, tempo ou valor das va
 <p align="center">
   <img src="https://github.com/lauradefaria/Microcontroladores/blob/main/imgs/testar1.png" width="250"> 
   <img src="https://github.com/lauradefaria/Microcontroladores/blob/main/imgs/testar2.png" width="250"> <br/>
-  Figura 7: Compilar e rodar o projeto     <br/><br/>
+  Figura 6: Compilar e rodar o projeto     <br/><br/>
 </p>
 
 • Para visualizar variáveis: Clique com o botão direito do mouse no nome do projeto, nisso aparecerá um menu. Selecione a opção `Properties` -> Surgirá a janela `Project Properties` -> Selecione a opção `mpasm (Global Options)` -> Habilite a opção `Build in absolute mode` -> Depois, `Apply` e `OK` (Recompile o projeto para que as alterações sejam habilitadas). <br/>
 <p align="center">
   <img src="https://github.com/lauradefaria/Microcontroladores/blob/main/imgs/testar4.jpeg" width="250"> <br/>
   <img src="https://github.com/lauradefaria/Microcontroladores/blob/main/imgs/testar5.jfif" width="250"> <br/>
-  Figura 8: Visualizar valor das variáveis     <br/><br/>
+  Figura 7: Visualizar valor das variáveis     <br/><br/>
 </p>
 
 •Para visualizar sinal ou tempo: Clique em Window e selecione `Debuggin` (para escolher Stopwatch e visualizar o tempo) ou `Simulator` (para escolher Logic Analyser e visualizar a onda referente ao sinal).
 <p align="center">
   <img src="https://github.com/lauradefaria/Microcontroladores/blob/main/imgs/testar3.png" width="250"> <br/>
-  Figura 9: Seção para visualizar tempo ou sinal     <br/><br/>
+  Figura 8: Seção para visualizar tempo ou sinal     <br/><br/>
 </p>
 
 # Atividades
@@ -109,7 +111,7 @@ Para rodar o programa e realizar a verificação de sinal, tempo ou valor das va
 4. ***<a href="https://github.com/lauradefaria/Microcontroladores/tree/main/Atividade%204">Atividade 4: Sete notas musicais, de DÓ a SI (261,63 Hz a 493,88 Hz)</a>***  <br/>
 
 ---
-## Autor
+## Autora
 |<a href="https://www.linkedin.com/in/lauradefaria/" target="_blank">**Laura de Faria**</a> | 
 |:-----------------------------------------------------------------------------------------:|
 |                   <img src="imgs/laura.png" width="200px"> </img>                            |
