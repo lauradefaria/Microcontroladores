@@ -101,59 +101,9 @@ Para rodar o programa e realizar a verificação de sinal, tempo ou valor das va
   Figura 9: Seção para visualizar tempo ou sinal     <br/><br/>
 </p>
 
-# Atividade 1:  Conversão de hexadecimal para BCD
-**Objetivo:** Exercícios de familiarização com o conjunto de instruções do PIC. <br/>
-**Especificações:** <br/>
-• Dado um valor em hexadecimal (1 byte), converter esse valor para a notação BCD.<br/>
-• Considere que o valor a ser convertido estará armazenado no registrador WORK e, após a conversão, o valor será armazenado na variável DADO.<br/>
-**Saída:** <br/>
-• Se o valor convertido for maior que 99, o registrador WORK será utilizado como byte complementar. <br/>
-• Se o valor convertido for menor que 99, o registrador WORK deverá conter zero. <br/>
+## Atividades
 
-<div align='center'>
-    <h4>Exemplos de saída</h4>
-    <table>
-        <tr><td>Valor (hexadecimal)</td> <td>WORK</td> <td>DADO</td></tr>
-        <tr><td>45</td> <td>0</td> <td>69</td></tr>
-        <tr><td>64</td> <td>1</td> <td>00</td></tr>
-        <tr><td>C5</td> <td>1</td> <td>97</td></tr>
-        <tr><td>C8</td> <td>2</td> <td>00</td></tr>
-        <tr><td>4D</td> <td>0</td> <td>77</td></tr>
-        <tr><td>B5</td> <td>1</td> <td>81</td></tr>
-        <tr><td>FC</td> <td>2</td> <td>52</td></tr>
-    </table>
-</div>
-
-# Atividade 2: Divisão de 2 números e resultado com uma casa decimal
-**Objetivo:** Exercícios de familiarização com o conjunto de instruções do PIC. <br/>
-**Especificações:** <br/>
-• Dados dois valores de 1 byte, produzir o quociente entre esses valores com uma casa decimal de precisão.<br/>
-• Considere-se que os dados estarão armazenados nas variáveis DADO e WORK.<br/>
-• O programa fará o quociente: DADO dividido por WORK ( DADO / WORK ).<br/>
-**Saída:** <br/>
-• a parte inteira do cálculo ficará armazenada em DADO.<br/>
-• A casa decimal (de 0 a 9) ficará armazenada em WORK. Essa casa decimal deve utilizar as regras de arredondamento.<br/>
-**Exemplo de saída:** <br/>
-• DADO=17 ; WORK=3 <br/>
-• DADO / WORK = 5,66666... -> DADO=5 ; WORK=7<br/>
-
-# Atividade 3: Ligar e desligar led com timer
-**Objetivo:** Exercício de aplicação e gerenciamento de TIMERs. <br/>
-**Especificações:** <br/>
-• Fazer o Led piscar alternadamente, o qual permanece ligado ou desligado por 30 ms (milisegundos).<br/>
-• Utilizar do Timer0, inicializando seu pre-scaler para 110 (1:128) e valor para .22 (255 - 22 = 233 -> 233 x 128 = 29.824 us) <br/>
-• Obter o resultado mais próximo de 30 ms.<br/>
-**Saída:** <br/>
-• Por meio do Logic Analyser, será visível uma onda quadrada na porta GP2 com o tempo igual no estado ligado/desligado<br/>
-
-# Atividade 4: Sete notas musicais, de DÓ a SI (261,63 Hz a 493,88 Hz)
-**Objetivo:** Exercício de aplicação e gerenciamento de TIMERs. <br/>
-**Especificações:** <br/>
-• As frequências das notas podem ser verificadas neste [ENDEREÇO](https://musicaeadoracao.com.br/25371/escala-musical-temperada-frequencias-das-notas-musicais/). <br/>
-• As 7 notas (de DÓ à SI) devem ser reproduzidas pela geração de um sinal de onda quadrada, com duty cycle de 50% (desejável).<br/>
-• A primeira nota deve ser DÓ, com frequência de 261,63 Hz.<br/>
-• Cada nota deve ter a duração de 0,5 s, sem a necessidade de intervalo entre elas.<br/>
-• O sinal deve ser gerado pela porta GP5.<br/>
-**Saída:** <br/>
-• A sequência de notas deve ser reproduzida continuamente enquanto a porta GP0 estiver em nível lógico LOW.<br/>
-• Para proteção do amplificador de áudio, enquanto GP0 estiver em HIGH, a saída GP5 deve permanecer em LOW.<br/>
+1. ***<a href="https://github.com/lauradefaria/Microcontroladores/tree/main/Atividade%201">Atividade 1:  Conversão de hexadecimal para BCD</a>***  <br/>
+2. ***<a href="https://github.com/lauradefaria/Microcontroladores/tree/main/Atividade%202">Atividade 2: Divisão de 2 números e resultado com uma casa decimal</a>***  <br/>
+3. ***<a href="https://github.com/lauradefaria/Microcontroladores/tree/main/Atividade%203">Atividade 3: Ligar e desligar led com timer</a>***  <br/>
+4. ***<a href="https://github.com/lauradefaria/Microcontroladores/tree/main/Atividade%204">Atividade 4: Sete notas musicais, de DÓ a SI (261,63 Hz a 493,88 Hz)</a>***  <br/>
