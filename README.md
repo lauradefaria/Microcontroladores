@@ -101,9 +101,16 @@ Para rodar o programa e realizar a verificação de sinal, tempo ou valor das va
   Figura 9: Seção para visualizar tempo ou sinal     <br/><br/>
 </p>
 
-## Atividades
+# Atividades
 
 1. ***<a href="https://github.com/lauradefaria/Microcontroladores/tree/main/Atividade%201">Atividade 1:  Conversão de hexadecimal para BCD</a>***  <br/>
 2. ***<a href="https://github.com/lauradefaria/Microcontroladores/tree/main/Atividade%202">Atividade 2: Divisão de 2 números e resultado com uma casa decimal</a>***  <br/>
 3. ***<a href="https://github.com/lauradefaria/Microcontroladores/tree/main/Atividade%203">Atividade 3: Ligar e desligar led com timer</a>***  <br/>
 4. ***<a href="https://github.com/lauradefaria/Microcontroladores/tree/main/Atividade%204">Atividade 4: Sete notas musicais, de DÓ a SI (261,63 Hz a 493,88 Hz)</a>***  <br/>
+
+---
+## Autor
+|<a href="https://www.linkedin.com/in/lauradefaria/" target="_blank">**Laura de Faria**</a> | 
+|:-----------------------------------------------------------------------------------------:|
+|                   <img src="imgs/laura.png" width="200px"> </img>                            |
+|               <a href="http://github.com/lauradefaria" target="_blank">`github.com/lauradefaria`</a>      |
