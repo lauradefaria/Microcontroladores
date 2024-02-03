@@ -5,7 +5,7 @@ Guia de atividades utilizando PIC 12F675, baseado na disciplina "Microcontrolado
 Um microcontrolador é um dispositivo compacto e altamente integrado que contém um processador central, memória, periféricos de entrada/saída e, em alguns casos, interfaces de comunicação. Ele é projetado para controlar funções específicas em sistemas embarcados. Ao contrário dos microprocessadores, que geralmente precisam de componentes externos para realizar tarefas específicas, os microcontroladores são projetados para serem autossuficientes. <br/>
 
 <p align="center">
-  <img src="https://github.com/lauradefaria/Microcontroladores/blob/main/imgs/Microcontrolador.png" width="250"> <br/>
+  <img src="https://github.com/lauradefaria/Microcontroladores/blob/main/imgs/Microcontrolador.jfif" width="250"> <br/>
   Figura 1: Microcontrolador     <br/>
 </p>
 
@@ -22,12 +22,6 @@ Ademais, as variações de microcontroladores se definem também pelas suas conf
 
 ## Aplicações
 Microcontroladores são peças fundamentais em uma diversidade de setores, desempenhando papéis cruciais em uma ampla gama de aplicações. Eles estão presentes em: Eletrodoméstico; Eletrônicos de consumo; Setor automotivo; Sistemas de controle industrial; Equipamentos médicos; Dispositivos de comunicação; Automação residencial. <br/>
-
-<p align="center">
-  <img src="https://github.com/lauradefaria/Microcontroladores/blob/main/imgs/Aplicacao1.png" width="250"> 
-  <img src="https://github.com/lauradefaria/Microcontroladores/blob/main/imgs/Aplicacao2.png" width="250"> <br/>
-  Figura 2: Aplicações de Microcontroladores     <br/>
-</p>
 
 ## Benefícios
 Eles oferecem uma integração abrangente ao combinar CPU, memória e periféricos em um único chip, simplificando significativamente o design de sistemas embarcados. Essa abordagem compacta contribui para a eficiência no desenvolvimento de dispositivos eletrônicos.<br/>
