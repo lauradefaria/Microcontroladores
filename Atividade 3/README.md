@@ -6,3 +6,6 @@
 • Obter o resultado mais próximo de 30 ms.<br/>
 **Saída:** <br/>
 • Por meio do Logic Analyser, será visível uma onda quadrada na porta GP2 com o tempo igual no estado ligado/desligado<br/>
+
+**Arquivos:** <br/>
+• O programa possui duas versões: Utilizando interrupção (LedInterrupcao.ASM) e outra apenas verificando a flag T0IF (LedAlternado.ASM)
