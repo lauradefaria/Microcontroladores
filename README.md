@@ -60,10 +60,6 @@ Utiliza-se da IDE MPLAB X para executar e visualizar os exercícios propostos. P
 1. Acesse o [Link de Download](https://www.microchip.com/en-us/tools-resources/archives/mplab-ecosystem) para adquirir a versão 4.20 do software (Verificado em 02/02/2024). <br/>
 
 2. Após instalado, clique na seção no canto superior esquerdo `File` e em `New Project`.<br/>
-<p align="center">
-  <img src="https://github.com/lauradefaria/Microcontroladores/blob/main/imgs/instalar1.png" width="250"> <br/>
-  Figura 3: Iniciar a criação do Projeto     <br/><br/>
-</p>
 
 3. Depois disso siga o percurso: `Standalone Project` -> o aparelho que será trabalhado `PIC12F675` -> o debbug header `AC162050` -> `Simulator` -> `mpasm`. <br/>
 
