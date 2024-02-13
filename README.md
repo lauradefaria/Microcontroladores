@@ -66,14 +66,6 @@ Utiliza-se da IDE MPLAB X para executar e visualizar os exercícios propostos. P
 </p>
 
 3. Depois disso siga o percurso: `Standalone Project` -> o aparelho que será trabalhado `PIC12F675` -> o debbug header `AC162050` -> `Simulator` -> `mpasm`. <br/>
-<p align="center">
-  <img src="https://github.com/lauradefaria/Microcontroladores/blob/main/imgs/instalar2.png" width="250"> 
-  <img src="https://github.com/lauradefaria/Microcontroladores/blob/main/imgs/instalar3.png" width="250"> 
-  <img src="https://github.com/lauradefaria/Microcontroladores/blob/main/imgs/instalar4.png" width="250"> 
-  <img src="https://github.com/lauradefaria/Microcontroladores/blob/main/imgs/instalar5.png" width="250"> 
-  <img src="https://github.com/lauradefaria/Microcontroladores/blob/main/imgs/instalar6.png" width="250"> <br/>
-  Figura 4: Passo-a-passo da criação do projeto     <br/><br/>
-</p>
 
 4. Por fim, clique na opção `Souce Files` dentro do seu projeto (localizado na esquerda) e `Add Existing Item`, adicionando o arquivo que deseja trabalhar (Caso deseje implementar um projeto do início, utilize como base o arquivo `Vazio.ASM` localizado neste repositório). <br/>
 <p align="center">
