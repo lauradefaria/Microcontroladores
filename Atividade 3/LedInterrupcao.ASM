@@ -1,119 +1,115 @@
 ;* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-;*              MODIFICA«’ES PARA USO COM 12F675                   *
+;*              MODIFICA√á√ïES PARA USO COM 12F675                   *
 ;*                FEITAS PELO PROF. MARDSON                        *
-;*                     FEVEREIRO DE 2023                           *
+;*                      DEZEMBRO DE 2023                           *
 ;*                 BASEADO NO EXEMPLO DO LIVRO                     *
-;*           Desbravando o PIC. David JosÈ de Souza                *
+;*           Desbravando o PIC. David Jos√© de Souza                *
 ;*-----------------------------------------------------------------*
 ;*   MODELO PARA O PIC 12F675                                      *
 ;* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 
 ;* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-;*                     ARQUIVOS DE DEFINI«’ES                      *
+;*                     ARQUIVOS DE DEFINI√á√ïES                      *
 ;* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-#INCLUDE <p12f675.inc>	;ARQUIVO PADR√O MICROCHIP PARA 12F675
+#INCLUDE <p12f675.inc>	;ARQUIVO PADR√ÉO MICROCHIP PARA 12F675
 
 	__CONFIG _BODEN_OFF & _CP_OFF & _PWRTE_ON & _WDT_OFF & _MCLRE_ON & _INTRC_OSC_NOCLKOUT
 
 ;* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-;*                    PAGINA«√O DE MEM”RIA                         *
+;*                    PAGINA√á√ÉO DE MEM√ìRIA                         *
 ;* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-;DEFINI«√O DE COMANDOS DE USU¡RIO PARA ALTERA«√O DA P¡GINA DE MEM”RIA
-#DEFINE	BANK0	BCF STATUS,RP0	;SETA BANK 0 DE MEM”RIA
-#DEFINE	BANK1	BSF STATUS,RP0	;SETA BANK 1 DE MAM”RIA
+;DEFINI√á√ÉO DE COMANDOS DE USU√ÅRIO PARA ALTERA√á√ÉO DA P√ÅGINA DE MEM√ìRIA
+#DEFINE	BANK0	BCF STATUS,RP0	;SETA BANK 0 DE MEM√ìRIA
+#DEFINE	BANK1	BSF STATUS,RP0	;SETA BANK 1 DE MAM√ìRIA
 
 ;* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-;*                         VARI¡VEIS                               *
+;*                         VARI√ÅVEIS                               *
 ;* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-; DEFINI«√O DOS NOMES E ENDERE«OS DE TODAS AS VARI¡VEIS UTILIZADAS 
+; DEFINI√á√ÉO DOS NOMES E ENDERE√áOS DE TODAS AS VARI√ÅVEIS UTILIZADAS 
 ; PELO SISTEMA
 
-	CBLOCK	0x20	;ENDERE«O INICIAL DA MEM”RIA DE
-					;USU¡RIO
-		W_TEMP		;REGISTRADORES TEMPOR¡RIOS PARA USO
-		STATUS_TEMP	;JUNTO ¿S INTERRUP«’ES
+	CBLOCK	0x20	;ENDERE√áO INICIAL DA MEM√ìRIA DE
+					;USU√ÅRIO
+		W_TEMP		;REGISTRADORES TEMPOR√ÅRIOS PARA USO
+		STATUS_TEMP	;JUNTO √ÄS INTERRUP√á√ïES
 
-		CONTADOR
-		;COLOQUE AQUI SUAS NOVAS VARI¡VEIS
-		;N√O ESQUE«A COMENT¡RIOS ESCLARECEDORES
+		CONTADOR  ;COLOQUE AQUI SUAS NOVAS VARI√ÅVEIS
+		          ;N√ÉO ESQUE√áA COMENT√ÅRIOS ESCLARECEDORES
 
-	ENDC			;FIM DO BLOCO DE DEFINI«√O DE VARI¡VEIS
+	ENDC			;FIM DO BLOCO DE DEFINI√á√ÉO DE VARI√ÅVEIS
 
 ;* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 ;*                        FLAGS INTERNOS                           *
 ;* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-; DEFINI«√O DE TODOS OS FLAGS UTILIZADOS PELO SISTEMA
+; DEFINI√á√ÉO DE TODOS OS FLAGS UTILIZADOS PELO SISTEMA
 
 ;* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 ;*                         CONSTANTES                              *
 ;* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-; DEFINI«√O DE TODAS AS CONSTANTES UTILIZADAS PELO SISTEMA
+; DEFINI√á√ÉO DE TODAS AS CONSTANTES UTILIZADAS PELO SISTEMA
 
 ;* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 ;*                           ENTRADAS                              *
 ;* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-; DEFINI«√O DE TODOS OS PINOS QUE SER√O UTILIZADOS COMO ENTRADA
-; RECOMENDAMOS TAMB…M COMENTAR O SIGNIFICADO DE SEUS ESTADOS (0 E 1)
+; DEFINI√á√ÉO DE TODOS OS PINOS QUE SER√ÉO UTILIZADOS COMO ENTRADA
+; RECOMENDAMOS TAMB√âM COMENTAR O SIGNIFICADO DE SEUS ESTADOS (0 E 1)
 
 ;* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-;*                           SAÕDAS                                *
+;*                           SA√çDAS                                *
 ;* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-; DEFINI«√O DE TODOS OS PINOS QUE SER√O UTILIZADOS COMO SAÕDA
-; RECOMENDAMOS TAMB…M COMENTAR O SIGNIFICADO DE SEUS ESTADOS (0 E 1)
+; DEFINI√á√ÉO DE TODOS OS PINOS QUE SER√ÉO UTILIZADOS COMO SA√çDA
+; RECOMENDAMOS TAMB√âM COMENTAR O SIGNIFICADO DE SEUS ESTADOS (0 E 1)
 
 ;* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 ;*                       VETOR DE RESET                            *
 ;* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 
-	ORG	0x00			;ENDERE«O INICIAL DE PROCESSAMENTO
+	ORG	0x00			;ENDERE√áO INICIAL DE PROCESSAMENTO
 	GOTO	INICIO
 	
 ;* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-;*                    INÕCIO DA INTERRUP«√O                        *
+;*                    IN√çCIO DA INTERRUP√á√ÉO                        *
 ;* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-; ENDERE«O DE DESVIO DAS INTERRUP«’ES. A PRIMEIRA TAREFA … SALVAR OS
-; VALORES DE "W" E "STATUS" PARA RECUPERA«√O FUTURA
+; ENDERE√áO DE DESVIO DAS INTERRUP√á√ïES. A PRIMEIRA TAREFA √â SALVAR OS
+; VALORES DE "W" E "STATUS" PARA RECUPERA√á√ÉO FUTURA
 
-	ORG	0x04			;ENDERE«O INICIAL DA INTERRUP«√O
+	ORG	0x04			;ENDERE√áO INICIAL DA INTERRUP√á√ÉO
 	MOVWF	W_TEMP		;COPIA W PARA W_TEMP
 	SWAPF	STATUS,W
 	MOVWF	STATUS_TEMP	;COPIA STATUS PARA STATUS_TEMP
 
 ;* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-;*                    ROTINA DE INTERRUP«√O                        *
+;*                    ROTINA DE INTERRUP√á√ÉO                        *
 ;* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-; AQUI SER√O ESCRITAS AS ROTINAS DE RECONHECIMENTO E TRATAMENTO DAS
-; INTERRUP«’ES
-
+; AQUI SER√ÉO ESCRITAS AS ROTINAS DE RECONHECIMENTO E TRATAMENTO DAS
+; INTERRUP√á√ïES
+	
 	MOVLW .8
 	MOVWF CONTADOR
+	CALL ADICIONAL
 	
-	CALL AJUSTE
-
 	BCF INTCON, T0IF
-
+	
 	MOVLW .22
 	MOVWF OPTION_REG
 	
 	BTFSC GPIO, GP2
 	GOTO DESLIGAR
 	GOTO LIGAR
-
+	
 DESLIGAR
-	BCF TRISIO, GP2
+	BCF GPIO, GP2
 	GOTO SAI_INT
 	
 LIGAR
-	NOP
-	NOP
-	BSF TRISIO, GP2
-	GOTO SAI_INT
+	BSF GPIO, GP2
+	GOTO SAI_INT	
 
 ;* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-;*                 ROTINA DE SAÕDA DA INTERRUP«√O                  *
+;*                 ROTINA DE SA√çDA DA INTERRUP√á√ÉO                  *
 ;* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 ; OS VALORES DE "W" E "STATUS" DEVEM SER RECUPERADOS ANTES DE 
-; RETORNAR DA INTERRUP«√O
+; RETORNAR DA INTERRUP√á√ÉO
 
 SAI_INT
 	SWAPF	STATUS_TEMP,W
@@ -125,16 +121,13 @@ SAI_INT
 ;* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 ;*	            	 ROTINAS E SUBROTINAS                      *
 ;* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-; CADA ROTINA OU SUBROTINA DEVE POSSUIR A DESCRI«√O DE FUNCIONAMENTO
-; E UM NOME COERENTE ¿S SUAS FUN«’ES.
+; CADA ROTINA OU SUBROTINA DEVE POSSUIR A DESCRI√á√ÉO DE FUNCIONAMENTO
+; E UM NOME COERENTE √ÄS SUAS FUN√á√ïES.
 
-AJUSTE
+ADICIONAL
 	NOP
 	DECFSZ CONTADOR
-	GOTO AJUSTE
-	
-	NOP
-	NOP
+	GOTO ADICIONAL
 	RETURN
 
 ;* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
@@ -144,26 +137,30 @@ AJUSTE
 INICIO
 	BANK1				;ALTERA PARA O BANCO 1
 	MOVLW	B'00000000' ;CONFIGURA TODAS AS PORTAS DO GPIO (PINOS)
-	MOVWF	TRISIO		;COMO SAÕDAS
+	MOVWF	TRISIO		;COMO SA√çDAS
 	CLRF	ANSEL 		;DEFINE PORTAS COMO Digital I/O
 	MOVLW	B'00000110'
-	MOVWF	OPTION_REG	;DEFINE OP«’ES DE OPERA«√O
+	MOVWF	OPTION_REG	;DEFINE OP√á√ïES DE OPERA√á√ÉO
 	MOVLW	B'10100000'
-	MOVWF	INTCON		;DEFINE OP«’ES DE INTERRUP«’ES
+	MOVWF	INTCON		;DEFINE OP√á√ïES DE INTERRUP√á√ïES
 	BANK0				;RETORNA PARA O BANCO
 	MOVLW	B'00000111'
-	MOVWF	CMCON		;DEFINE O MODO DE OPERA«√O DO COMPARADOR ANAL”GICO
+	MOVWF	CMCON		;DEFINE O MODO DE OPERA√á√ÉO DO COMPARADOR ANAL√ìGICO
 
 ;* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-;*                     INICIALIZA«√O DAS VARI¡VEIS                 *
+;*                     INICIALIZA√á√ÉO DAS VARI√ÅVEIS                 *
 ;* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 
+	MOVLW .22
+	MOVWF OPTION_REG
 ;* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 ;*                     ROTINA PRINCIPAL                            *
 ;* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 MAIN
-	
-	GOTO MAIN
+
+	;CORPO DA ROTINA PRINCIPAL
+
+	GOTO	MAIN
 
 ;* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 ;*                       FIM DO PROGRAMA                           *
