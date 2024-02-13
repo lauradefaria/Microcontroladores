@@ -10,6 +10,6 @@
 • A Figura 1 ilustra o funcionamento descrito para o semáforo.<br/>
 
 <p align="center">
-  <img src="https://github.com/lauradefaria/Microcontroladores/blob/main/imgs/testar4.jpeg" width="250"> <br/>
+  <img src="https://github.com/lauradefaria/Microcontroladores/blob/main/imgs/Atividade6.png" width="250"> <br/>
   Figura 1: Semáforo de um cruzamento simples. <br/>
 </p>
