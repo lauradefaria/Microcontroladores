@@ -109,6 +109,8 @@ Para rodar o programa e realizar a verificação de sinal, tempo ou valor das va
 2. ***<a href="https://github.com/lauradefaria/Microcontroladores/tree/main/Atividade%202">Atividade 2: Divisão de 2 números e resultado com uma casa decimal</a>***  <br/>
 3. ***<a href="https://github.com/lauradefaria/Microcontroladores/tree/main/Atividade%203">Atividade 3: Ligar e desligar led com timer</a>***  <br/>
 4. ***<a href="https://github.com/lauradefaria/Microcontroladores/tree/main/Atividade%204">Atividade 4: Sete notas musicais, de DÓ a SI (261,63 Hz a 493,88 Hz)</a>***  <br/>
+5. ***<a href="https://github.com/lauradefaria/Microcontroladores/tree/main/Atividade%205">Atividade 5: Manuseando GP2 por interrupção e estímulo externo</a>***  <br/>
+6. ***<a href="https://github.com/lauradefaria/Microcontroladores/tree/main/Atividade%206">Atividade 6: Semáforo de trânsito</a>***  <br/>
 
 ---
 ## Autora
