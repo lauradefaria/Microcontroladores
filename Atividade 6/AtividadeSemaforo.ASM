@@ -1,51 +1,51 @@
 ;* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-;*              MODIFICA«’ES PARA USO COM 12F675                   *
+;*              MODIFICA√á√ïES PARA USO COM 12F675                   *
 ;*                FEITAS PELO PROF. MARDSON                        *
 ;*                     FEVEREIRO DE 2023                           *
 ;*                 BASEADO NO EXEMPLO DO LIVRO                     *
-;*           Desbravando o PIC. David JosÈ de Souza                *
+;*           Desbravando o PIC. David Jos√© de Souza                *
 ;*-----------------------------------------------------------------*
 ;*   MODELO PARA O PIC 12F675                                      *
 ;* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 
 ;* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-;*                     ARQUIVOS DE DEFINI«’ES                      *
+;*                     ARQUIVOS DE DEFINI√á√ïES                      *
 ;* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-#INCLUDE <p12f675.inc>	;ARQUIVO PADR√O MICROCHIP PARA 12F675
+#INCLUDE <p12f675.inc>	;ARQUIVO PADR√ÉO MICROCHIP PARA 12F675
 
 	__CONFIG _BODEN_OFF & _CP_OFF & _PWRTE_ON & _WDT_OFF & _MCLRE_ON & _INTRC_OSC_NOCLKOUT
 
 ;* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-;*                    PAGINA«√O DE MEM”RIA                         *
+;*                    PAGINA√á√ÉO DE MEM√ìRIA                         *
 ;* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-;DEFINI«√O DE COMANDOS DE USU¡RIO PARA ALTERA«√O DA P¡GINA DE MEM”RIA
-#DEFINE	BANK0	BCF STATUS,RP0	;SETA BANK 0 DE MEM”RIA
-#DEFINE	BANK1	BSF STATUS,RP0	;SETA BANK 1 DE MAM”RIA
+;DEFINI√á√ÉO DE COMANDOS DE USU√ÅRIO PARA ALTERA√á√ÉO DA P√ÅGINA DE MEM√ìRIA
+#DEFINE	BANK0	BCF STATUS,RP0	;SETA BANK 0 DE MEM√ìRIA
+#DEFINE	BANK1	BSF STATUS,RP0	;SETA BANK 1 DE MAM√ìRIA
 
 ;* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-;*                         VARI¡VEIS                               *
+;*                         VARI√ÅVEIS                               *
 ;* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-; DEFINI«√O DOS NOMES E ENDERE«OS DE TODAS AS VARI¡VEIS UTILIZADAS 
+; DEFINI√á√ÉO DOS NOMES E ENDERE√áOS DE TODAS AS VARI√ÅVEIS UTILIZADAS 
 ; PELO SISTEMA
 
-	CBLOCK	0x20	;ENDERE«O INICIAL DA MEM”RIA DE
-					;USU¡RIO
-		W_TEMP		;REGISTRADORES TEMPOR¡RIOS PARA USO
-		STATUS_TEMP	;JUNTO ¿S INTERRUP«’ES
+	CBLOCK	0x20	;ENDERE√áO INICIAL DA MEM√ìRIA DE
+					;USU√ÅRIO
+		W_TEMP		;REGISTRADORES TEMPOR√ÅRIOS PARA USO
+		STATUS_TEMP	;JUNTO √ÄS INTERRUP√á√ïES
 
-		;COLOQUE AQUI SUAS NOVAS VARI¡VEIS
-		;N√O ESQUE«A COMENT¡RIOS ESCLARECEDORES
+		;COLOQUE AQUI SUAS NOVAS VARI√ÅVEIS
+		;N√ÉO ESQUE√áA COMENT√ÅRIOS ESCLARECEDORES
 		
-		CONT_VERMELHO  ; CONTADOR PARA ATINGIR 2,0 NA SITUA«√O: SEMAFORO1(VERMELHO) e SEMAFORO2(VERDE)
-		SEMAFORO       ; MARCA A COR QUE EST¡ NO SEMAFORO 1
-		CONT_VERDE     ; CONTADOR PARA ATINGIR 2,0 NA SITUA«√O: SEMAFORO1(VERDE)  e SEMAFORO2(VERMELHO)
+		CONT_VERMELHO  ; CONTADOR PARA ATINGIR 2,0 NA SITUA√á√ÉO: SEMAFORO1(VERMELHO) e SEMAFORO2(VERDE)
+		SEMAFORO       ; MARCA A COR QUE EST√Å NO SEMAFORO 1
+		CONT_VERDE     ; CONTADOR PARA ATINGIR 2,0 NA SITUA√á√ÉO: SEMAFORO1(VERDE)  e SEMAFORO2(VERMELHO)
 		
-	ENDC			;FIM DO BLOCO DE DEFINI«√O DE VARI¡VEIS
+	ENDC			;FIM DO BLOCO DE DEFINI√á√ÉO DE VARI√ÅVEIS
 
 ;* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 ;*                        FLAGS INTERNOS                           *
 ;* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-; DEFINI«√O DE TODOS OS FLAGS UTILIZADOS PELO SISTEMA
+; DEFINI√á√ÉO DE TODOS OS FLAGS UTILIZADOS PELO SISTEMA
 #DEFINE	SEM_VERDE	SEMAFORO,0
 #DEFINE	SEM_AMARELO	SEMAFORO,1
 #DEFINE	SEM_VERMELHO	SEMAFORO,2
@@ -54,50 +54,50 @@
 ;* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 ;*                         CONSTANTES                              *
 ;* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-; DEFINI«√O DE TODAS AS CONSTANTES UTILIZADAS PELO SISTEMA
+; DEFINI√á√ÉO DE TODAS AS CONSTANTES UTILIZADAS PELO SISTEMA
 
 ;* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 ;*                           ENTRADAS                              *
 ;* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-; DEFINI«√O DE TODOS OS PINOS QUE SER√O UTILIZADOS COMO ENTRADA
-; RECOMENDAMOS TAMB…M COMENTAR O SIGNIFICADO DE SEUS ESTADOS (0 E 1)
+; DEFINI√á√ÉO DE TODOS OS PINOS QUE SER√ÉO UTILIZADOS COMO ENTRADA
+; RECOMENDAMOS TAMB√âM COMENTAR O SIGNIFICADO DE SEUS ESTADOS (0 E 1)
 
 ;* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-;*                           SAÕDAS                                *
+;*                           SA√çDAS                                *
 ;* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-; DEFINI«√O DE TODOS OS PINOS QUE SER√O UTILIZADOS COMO SAÕDA
-; RECOMENDAMOS TAMB…M COMENTAR O SIGNIFICADO DE SEUS ESTADOS (0 E 1)
+; DEFINI√á√ÉO DE TODOS OS PINOS QUE SER√ÉO UTILIZADOS COMO SA√çDA
+; RECOMENDAMOS TAMB√âM COMENTAR O SIGNIFICADO DE SEUS ESTADOS (0 E 1)
 
 ;* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 ;*                       VETOR DE RESET                            *
 ;* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 
-	ORG	0x00			;ENDERE«O INICIAL DE PROCESSAMENTO
+	ORG	0x00			;ENDERE√áO INICIAL DE PROCESSAMENTO
 	GOTO	INICIO
 	
 ;* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-;*                    INÕCIO DA INTERRUP«√O                        *
+;*                    IN√çCIO DA INTERRUP√á√ÉO                        *
 ;* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-; ENDERE«O DE DESVIO DAS INTERRUP«’ES. A PRIMEIRA TAREFA … SALVAR OS
-; VALORES DE "W" E "STATUS" PARA RECUPERA«√O FUTURA
+; ENDERE√áO DE DESVIO DAS INTERRUP√á√ïES. A PRIMEIRA TAREFA √â SALVAR OS
+; VALORES DE "W" E "STATUS" PARA RECUPERA√á√ÉO FUTURA
 
-	ORG	0x04			;ENDERE«O INICIAL DA INTERRUP«√O
+	ORG	0x04			;ENDERE√áO INICIAL DA INTERRUP√á√ÉO
 	MOVWF	W_TEMP		;COPIA W PARA W_TEMP
 	SWAPF	STATUS,W
 	MOVWF	STATUS_TEMP	;COPIA STATUS PARA STATUS_TEMP
 
 ;* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-;*                    ROTINA DE INTERRUP«√O                        *
+;*                    ROTINA DE INTERRUP√á√ÉO                        *
 ;* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-; AQUI SER√O ESCRITAS AS ROTINAS DE RECONHECIMENTO E TRATAMENTO DAS
-; INTERRUP«’ES
+; AQUI SER√ÉO ESCRITAS AS ROTINAS DE RECONHECIMENTO E TRATAMENTO DAS
+; INTERRUP√á√ïES
 
 INTERRUPCAO
 	; 0,5 SEGUNDO = 8 us (PRESCALER) X 62500 (TMR1)
 	; TMR1 = 65536 - 62500 = 3036 (00001011 11011100)
 	
 	BTFSS PIR1, TMR1IF ; CHECA SE PASSOU OS 500 ms
-	GOTO INTERRUPCAO ; SE N√O, CONTINUA COM A MESMA COR
+	GOTO INTERRUPCAO ; SE N√ÉO, CONTINUA COM A MESMA COR
 	
 	; SE SIM, RESETA O TIMER1
 	MOVLW B'11011011'
@@ -108,16 +108,16 @@ INTERRUPCAO
 	BCF PIR1, TMR1IF  ;limpa a flag
 	
 	MOVLW .1
-	SUBWF CONT_VERDE, W ; verifica a operaÁ„o Contador - Work
+	SUBWF CONT_VERDE, W ; verifica a opera√ß√£o Contador - Work
 	BTFSC STATUS, C ; se contador < work , para
 	GOTO IDENTIFICAR_COR
 	
 	MOVLW .1
-	SUBWF CONT_VERMELHO, W ; verifica a operaÁ„o Contador - Work
+	SUBWF CONT_VERMELHO, W ; verifica a opera√ß√£o Contador - Work
 	BTFSC STATUS, C ; se contaador < work , para
 	GOTO IDENTIFICAR_COR
 	
-	RLF SEMAFORO, F ; PASSA PARA A PR”XIMA NOTA
+	RLF SEMAFORO, F ; PASSA PARA A PR√ìXIMA NOTA
 	GOTO IDENTIFICAR_COR
 	
 RESETA_SEMAFORO
@@ -126,13 +126,13 @@ RESETA_SEMAFORO
 	RETURN
 
 IDENTIFICAR_COR
-	; A identificaÁ„o das cores do sem·foro
-	; … dada da seguinte configuraÁ„o:
+	; A identifica√ß√£o das cores do sem√°foro
+	; √â dada da seguinte configura√ß√£o:
 	; SEMAFORO 1 - COR DO SEMAFORO 
 	; 00000001 - VERDE
 	; 00000010 - AMARELO
 	; 00000100 - VERMELHO
-	; 00001000 - VERMELHO & AMARELO (Sem·foro 2)
+	; 00001000 - VERMELHO & AMARELO (Sem√°foro 2)
 		
 	BTFSC SEM_VERDE
 	GOTO RESETA_VERDE
@@ -201,10 +201,10 @@ RESETA_VERMELHO_AMARELO
 	GOTO SAI_INT	
 	
 ;* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-;*                 ROTINA DE SAÕDA DA INTERRUP«√O                  *
+;*                 ROTINA DE SA√çDA DA INTERRUP√á√ÉO                  *
 ;* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 ; OS VALORES DE "W" E "STATUS" DEVEM SER RECUPERADOS ANTES DE 
-; RETORNAR DA INTERRUP«√O
+; RETORNAR DA INTERRUP√á√ÉO
 
 SAI_INT
 	SWAPF	STATUS_TEMP,W
@@ -216,20 +216,20 @@ SAI_INT
 ;* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 ;*	            	 ROTINAS E SUBROTINAS                      *
 ;* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-; CADA ROTINA OU SUBROTINA DEVE POSSUIR A DESCRI«√O DE FUNCIONAMENTO
-; E UM NOME COERENTE ¿S SUAS FUN«’ES.
+; CADA ROTINA OU SUBROTINA DEVE POSSUIR A DESCRI√á√ÉO DE FUNCIONAMENTO
+; E UM NOME COERENTE √ÄS SUAS FUN√á√ïES.
 	
-AJUSTE_VERDE                 ; RESETA A QUANTIDADE DE VEZES QUE A COR VERDE IR¡ REPETIR          
+AJUSTE_VERDE                 ; RESETA A QUANTIDADE DE VEZES QUE A COR VERDE IR√Å REPETIR          
 	MOVLW .4
 	MOVWF CONT_VERDE
 	
 	CALL RESETA_SEMAFORO ; SE SIM, REINICIA A ESCALA	
 	RETURN
 	
-AJUSTE_VERMELHO              ; RESETA A QUANTIDADE DE VEZES QUE A COR VERMELHA IR¡ REPETIR   
+AJUSTE_VERMELHO              ; RESETA A QUANTIDADE DE VEZES QUE A COR VERMELHA IR√Å REPETIR   
 	MOVLW .4
 	MOVWF CONT_VERMELHO
-	RLF SEMAFORO, F ; PASSA PARA A PR”XIMA COR
+	RLF SEMAFORO, F ; PASSA PARA A PR√ìXIMA COR
 	
 	RETURN
 
@@ -241,22 +241,22 @@ INICIO
 	BANK1
 	; SEMAFORO1: GP0(VERDE) e GP1(VERMELHO) | EM COMUM: GP2(AMARELO) | SEMAFORO2: GP4(VERDE) e GP5(VERMELHO)
 	MOVLW	B'00000000'	;CONFIGURA TODAS AS PORTAS DO GPIO (PINOS)
-	MOVWF	TRISIO		;COMO SAÕDAS
+	MOVWF	TRISIO		;COMO SA√çDAS
 	CLRF	ANSEL 		;DEFINE PORTAS COMO Digital I/O
-	MOVLW	B'10000010'
-	MOVWF	OPTION_REG	;DEFINE OP«’ES DE OPERA«√O
-	MOVLW	B'11100000'
-	MOVWF	INTCON		;DEFINE OP«’ES DE INTERRUP«’ES
+	MOVLW	B'00000000'
+	MOVWF	OPTION_REG	;DEFINE OP√á√ïES DE OPERA√á√ÉO
+	MOVLW	B'11000000'
+	MOVWF	INTCON		;DEFINE OP√á√ïES DE INTERRUP√á√ïES
 	MOVLW	B'00000001'
 	MOVWF	PIE1		;ATIVA A INTERRUPCAO DO TIMER1
 	BANK0
 	MOVLW	B'00000111'
-	MOVWF	CMCON		;DEFINE O MODO DE OPERA«√O DO COMP. ANAL”GICO
+	MOVWF	CMCON		;DEFINE O MODO DE OPERA√á√ÉO DO COMP. ANAL√ìGICO
 	MOVLW	B'00110001'
 	MOVWF	T1CON		;ATIVA O TIMER1 E DEFINE O PRESCALER
 
 ;* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-;*                     INICIALIZA«√O DAS VARI¡VEIS                 *
+;*                     INICIALIZA√á√ÉO DAS VARI√ÅVEIS                 *
 ;* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 	; TIMER1 PARA OS 0,5s
 	MOVLW	B'11011101'
